@@ -1,11 +1,22 @@
+//rendered from NoteContainer, renders individual NoteItems
+
 import React from "react";
 import NoteItem from "./NoteItem";
 
-function NoteList() {
+function NoteList( {notes, setViewer} ) {
+  const renderNotes = () => {
+    return notes.map((note) => {
+      return <NoteItem 
+        key = {note.id}
+        title = {note.title}
+        body = {note.body}
+      />
+    })
+  }
+
   return (
     <ul>
-      {/* Render list of notes here... */}
-      <NoteItem />
+      <li onClick={setViewer("viewer")}>{renderNotes()}</li>
     </ul>
   );
 }

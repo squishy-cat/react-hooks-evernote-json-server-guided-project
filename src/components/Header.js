@@ -1,3 +1,5 @@
+//Static header
+
 import React from "react";
 
 function Header() {
@@ -5,7 +7,7 @@ function Header() {
     <div className="nav-bar">
       <ul>
         <li className="nav-item">
-          <h2>Your App Title Goes Here</h2>
+          <h2>Eve's Notepad</h2>
         </li>
       </ul>
     </div>

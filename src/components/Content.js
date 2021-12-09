@@ -1,3 +1,5 @@
+//rendered in NoteContainer, conditionally renders NoteEditor, NoteViewer, and Instructions
+
 import React from "react";
 import NoteEditor from "./NoteEditor";
 import NoteViewer from "./NoteViewer";
@@ -10,12 +12,16 @@ import Instructions from "./Instructions";
           Then complete the rest of your app before attempting to
           refactor to get this Content component to work.
 */
-function Content() {
+function Content( {viewerState, setViewer} ) {
   const getContent = () => {
-    if (false) {
-      return <NoteEditor />;
-    } else if (false) {
-      return <NoteViewer />;
+    if (viewerState = "editor") {
+      return <NoteEditor 
+        setViewer = {setViewer}
+      />;
+    } else if (viewerState = "viewer") {
+      return <NoteViewer 
+        setViewer = {setViewer}
+      />;
     } else {
       return <Instructions />;
     }

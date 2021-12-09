@@ -1,3 +1,5 @@
+//rendered by Content, static
+
 import React from "react";
 
 function Instructions() {

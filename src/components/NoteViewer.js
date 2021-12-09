@@ -1,11 +1,13 @@
+//renders full note content
+
 import React from "react";
 
-function NoteViewer() {
+function NoteViewer( {setViewer} ) {
   return (
     <>
       <h2>Title</h2>
       <p>Body</p>
-      <button>Edit</button>
+      <button onClick={setViewer("editor")}>Edit</button>
     </>
   );
 }

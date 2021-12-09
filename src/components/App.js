@@ -1,3 +1,5 @@
+//top level workspace, renders Header and NoteContainer
+
 import React from "react";
 import Header from "./Header";
 import NoteContainer from "./NoteContainer";
