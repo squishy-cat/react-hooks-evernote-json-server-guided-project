@@ -9,7 +9,7 @@ function NoteEditor( {setViewer} ) {
       <textarea name="body" />
       <div className="button-row">
         <input className="button" type="submit" value="Save" />
-        <button type="button" onClick={setViewer("viewer")}>Cancel</button>
+        <button type="button"  onClick = {() => setViewer("viewer")}>Cancel</button>
       </div>
     </form>
   );

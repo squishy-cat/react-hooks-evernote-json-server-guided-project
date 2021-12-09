@@ -8,7 +8,7 @@ import Content from "./Content";
 function NoteContainer() {
   const [notes, setNotes] = useState([]);
   const [search, setSearch] = useState("");
-  const [viewer, setViewer] = useState("")
+  const [viewerState, setViewer] = useState(null)
 
   useEffect(() => {
     fetch ("http://localhost:3000/notes")
@@ -29,7 +29,7 @@ function NoteContainer() {
           setViewer = {setViewer}
         />
         <Content 
-          viewerState = {viewer}
+          viewerState = {viewerState}
           setViewer = {setViewer}
         />
       </div>

@@ -3,20 +3,22 @@
 import React from "react";
 import NoteItem from "./NoteItem";
 
-function NoteList( {notes, setViewer} ) {
+function NoteList( {notes, setViewer, setViewNote} ) {
   const renderNotes = () => {
     return notes.map((note) => {
       return <NoteItem 
         key = {note.id}
         title = {note.title}
         body = {note.body}
+        setViewer = {setViewer}
+        setViewNote = {setViewNote}
       />
     })
   }
 
   return (
     <ul>
-      <li onClick={setViewer("viewer")}>{renderNotes()}</li>
+      {renderNotes()}
     </ul>
   );
 }

@@ -7,7 +7,7 @@ function NoteViewer( {setViewer} ) {
     <>
       <h2>Title</h2>
       <p>Body</p>
-      <button onClick={setViewer("editor")}>Edit</button>
+      <button  onClick = {() => setViewer("editor")}>Edit</button>
     </>
   );
 }
