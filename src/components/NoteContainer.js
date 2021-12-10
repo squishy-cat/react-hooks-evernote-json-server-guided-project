@@ -9,6 +9,7 @@ function NoteContainer() {
   const [notes, setNotes] = useState([]);
   const [search, setSearch] = useState("");
   const [viewerState, setViewer] = useState(null)
+  const [viewNote, setViewNote] = useState("")
 
   useEffect(() => {
     fetch ("http://localhost:3000/notes")
@@ -27,10 +28,12 @@ function NoteContainer() {
         <Sidebar 
           notes = {displayNotes}
           setViewer = {setViewer}
+          setViewNote = {setViewNote}
         />
         <Content 
           viewerState = {viewerState}
           setViewer = {setViewer}
+          viewNote = {viewNote}
         />
       </div>
     </>

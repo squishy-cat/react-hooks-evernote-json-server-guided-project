@@ -8,8 +8,7 @@ function NoteList( {notes, setViewer, setViewNote} ) {
     return notes.map((note) => {
       return <NoteItem 
         key = {note.id}
-        title = {note.title}
-        body = {note.body}
+        note = {note}
         setViewer = {setViewer}
         setViewNote = {setViewNote}
       />
